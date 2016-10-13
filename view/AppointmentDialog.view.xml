@@ -1,0 +1,22 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+  xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m">
+  <VBox>
+  <f:SimpleForm>
+    <Label text="Start" />
+    <DateTimePicker dateValue="{/newEntry/start}"/>
+    <Label text="End" />
+    <DateTimePicker dateValue="{/newEntry/end}"/>
+    <Label text="Title" />
+    <Input value="{/newEntry/title}"/>
+    <Label text="Info" />
+    <Input value="{/newEntry/info}"/>
+    <Label text="People" />
+    <List items="{/people}" mode="MultiSelect" includeItemInSelection="true">
+      <StandardListItem title="{name}" selected="{selected}"/>
+    </List>
+  </f:SimpleForm>
+  </VBox>
+</mvc:View>
